@@ -17,23 +17,28 @@ public class FilmController {
     }
 
     @GetMapping
-    public List<Film> findAll(){
+    public List<Film> findAll() {
         return this.filmService.findAll();
     }
 
     @PostMapping
-    public Film save(@RequestBody Film film){
+    public Film save(@RequestBody Film film) {
         return this.filmService.save(film);
     }
 
     @DeleteMapping("{id}")
-    public void delete(@PathVariable String id){
+    public void delete(@PathVariable String id) {
         this.filmService.delete(id);
     }
 
     @PutMapping
-    public Film putFilm(@RequestBody Film film){
+    public Film putFilm(@RequestBody Film film) {
         return this.filmService.putFilm(film);
+    }
+
+    @GetMapping("{nom}")
+    public Film findFilmByNom(@PathVariable String nom) {
+        return this.filmService.findFilmbyNom(nom);
     }
 
 

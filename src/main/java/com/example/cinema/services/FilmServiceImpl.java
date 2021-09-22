@@ -33,4 +33,11 @@ public class FilmServiceImpl implements FilmService {
     public Film putFilm(Film film) {
         return this.filmRepository.save(film);
     }
+
+    @Override
+    public Film findFilmbyNom(String nom) {
+        Film film= this.filmRepository.findFirstByNom(nom);
+        film.setNom(film.getNom());
+        return film;
+    }
 }

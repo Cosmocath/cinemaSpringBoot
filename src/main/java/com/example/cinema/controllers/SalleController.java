@@ -30,7 +30,7 @@ public class SalleController {
     }
 
     @GetMapping("{id}")
-    public Salle findById(@PathVariable String id){
+    public Salle findById(@PathVariable String id) {
         return this.salleService.findById(id);
     }
 
@@ -40,11 +40,9 @@ public class SalleController {
     }
 
     /** TO DO
-    @GetMapping("")
-    public List<Film> findFilmbySalleandSeance(@PathVariable String id){
-        return this.salleService.findSeanceBySalleId(id)
-    }**/
-
+     @GetMapping("") public List<Film> findFilmbySalleandSeance(@PathVariable String id){
+     return this.salleService.findSeanceBySalleId(id)
+     }**/
 
 
 }
