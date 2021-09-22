@@ -9,4 +9,5 @@ public interface FilmService {
     public Film save(Film film);
     public void delete(String id);
     public Film putFilm(Film film);
+    public Film findFilmbyNom(String nom);
 }
