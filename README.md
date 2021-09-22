@@ -1,2 +1,2 @@
 # cinemaSpringBoot
-hello ceci est readme
+Projet cinema avec springboot
