@@ -39,5 +39,12 @@ public class SalleController {
         return this.salleService.findSeanceBySalleId(id);
     }
 
+    /** TO DO
+    @GetMapping("")
+    public List<Film> findFilmbySalleandSeance(@PathVariable String id){
+        return this.salleService.findSeanceBySalleId(id)
+    }**/
+
+
 
 }

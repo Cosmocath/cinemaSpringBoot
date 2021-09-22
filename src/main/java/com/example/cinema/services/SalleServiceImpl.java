@@ -13,7 +13,7 @@ public class SalleServiceImpl implements SalleService {
 
     private SalleRepository salleRepository;
 
-    public SalleServiceImpl(SalleRepository salleRepository,SeanceRepository seanceRepository, FilmRepository filmRepository) {
+    public SalleServiceImpl(SalleRepository salleRepository, SeanceRepository seanceRepository, FilmRepository filmRepository) {
         this.salleRepository = salleRepository;
     }
 
@@ -35,5 +35,14 @@ public class SalleServiceImpl implements SalleService {
     @Override
     public List<Seance> findSeanceBySalleId(String id) {
         return this.findById(id).getSeances();
+    }
+
+    @Override
+    public void delete(String id) {
+        this.salleRepository.deleteById(id);
+    }
+    @Override
+    public Salle putSalle(Salle salle) {
+        return this.salleRepository.save(salle);
     }
 }

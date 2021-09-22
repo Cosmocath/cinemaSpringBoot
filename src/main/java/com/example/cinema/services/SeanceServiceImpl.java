@@ -35,4 +35,14 @@ public class SeanceServiceImpl implements SeanceService {
     public List<Film> findMovieBySeanceId(String id) {
         return this.findById(id).getFilms();
     }
+
+    @Override
+    public void delete(String id) {
+        this.seanceRepository.deleteById(id);
+    }
+
+    @Override
+    public Seance putSeance(Seance seance) {
+        return this.seanceRepository.save(seance);
+    }
 }

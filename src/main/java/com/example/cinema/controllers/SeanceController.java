@@ -35,6 +35,7 @@ public class SeanceController {
 
     @GetMapping("{id}/films")
     public List<Film> findFilmsbySeance(@PathVariable String id) {
+        /**exemple d'url : http://localhost:8080/seances/614b3cf363a8112ae6df4c7c/films**/
         return this.seanceService.findMovieBySeanceId(id);
     }
 
