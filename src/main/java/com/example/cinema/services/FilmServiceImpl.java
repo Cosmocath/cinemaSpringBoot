@@ -37,7 +37,7 @@ public class FilmServiceImpl implements FilmService {
     @Override
     public Film findFilmbyNom(String nom) {
         Film film= this.filmRepository.findFirstByNom(nom);
-        film.setNom(film.getNom());
+        film.setNom(film.getNom().toUpperCase());
         return film;
     }
 }

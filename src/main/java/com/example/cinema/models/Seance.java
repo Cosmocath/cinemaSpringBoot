@@ -19,7 +19,8 @@ import java.util.List;
 public class Seance {
     @Id
     private String id;
-    private Date date;
+    private Date debut;
+    private Date fin;
 
     @DBRef
     @Field("film")
